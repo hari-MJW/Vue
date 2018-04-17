@@ -4,6 +4,14 @@
         <div class="input-group" style="margin-bottom: 10px;">
             <input type="text" class="form-control" placeholder="할일을 입력하세요."
              v-model="name" v-on:keyup.enter="createTodo(name)" />
+            <!-- 
+                v-on:keyup.13 = v-on:keyup.enter
+                v-on:keyup.ctrl.67 : Ctrl+C
+                .enter, .tab, .delete, .esc, .space, .up, .down, .left, .right, .ctrl, .alt, .shift, .meta
+
+                @mouseup.let, @mouseup.right
+                v-on:contextmenu.prevent
+            -->
             <span class="input-group-btn">
                 <button class="btn btn-default" type="button" @click="createTodo(name)">추가</button>
             </span>
